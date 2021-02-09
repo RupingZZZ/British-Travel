@@ -1,0 +1,19 @@
+@keyframes move {
+  0% {background-position: 0 0;}
+  100% {
+    /*宽度固定，如果为百分比背景不会滚动*/
+    background-position: -1000px 0;
+  }
+}
+
+.wrap {
+  /*设置背景渐变色*/
+  background-image: linear-gradient(to right, red, orange, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  /*chrome 私有样式，加前缀，显示背景图片*/
+  -webkit-background-clip: text;
+  animation: move 5s infinite;
+  /*颜色设为透明*/
+  color: transparent;
+  /*宽度固定*/
+  width: 1000px;
+}
